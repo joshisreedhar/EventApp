@@ -50,4 +50,5 @@ public class Session {
   public Category getCategory() {
     return category;
   }
+
 }
