@@ -40,4 +40,20 @@ public class Event {
     public String getLocation() {
         return session.getLocation();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Event event = (Event) o;
+
+        return !(session != null ? !session.equals(event.session) : event.session != null);
+
+    }
+
+    @Override
+    public int hashCode() {
+        return session != null ? session.hashCode() : 0;
+    }
 }
